@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#hamburger {
+  background-color: grey;
+  height: 100vh;
+  width: 18vw;
+  position: fixed;
+}
+#hamburger > div:first-child {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#hamburger > div:first-child .css_section {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 3px;
+}
+#hamburger > div:first-child .css_section #css {
+  width: 15%;
+}
+#hamburger > div:first-child .css_section span {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+#hamburger > div:first-child #arrow {
+  width: 5%;
+  transform: rotate(180deg);
+}
+#hamburger > div:nth-child(2) {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+#hamburger > div:nth-child(2) button {
+  width: 100%;
+  padding: 10px 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+}
+#hamburger > div:nth-child(2) button img {
+  transform: translateY(-1px);
+  width: 25px;
+}
+#hamburger > div:nth-child(2) button span {
+  font-size: 16px;
+}
+#hamburger > div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+#hamburger > div:nth-child(3) .mail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 25px;
+  opacity: 0.8;
+}
+#hamburger > div:nth-child(3) .mail img {
+  width: 20px;
+}
+#hamburger > div:nth-child(3) .mail spam {
+  font-weight: bold;
+}
+#hamburger > div:nth-child(3) .mail:hover {
+  border-left: 3px solid white;
+  padding-left: 22.5px;
+  opacity: 1;
+}
+#hamburger > div:nth-child(4) {
+  padding: 15px 15px 10px;
+}
+#hamburger .message_container {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+#hamburger .message_container .message {
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#hamburger .message_container .message div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#hamburger .message_container .message div .color {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+#hamburger .message_container .message span {
+  font-weight: bold;
+}
+#hamburger .chat_container {
+  padding: 0 15px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  gap: 15px;
+}
+#hamburger .chat_container .chat {
+  display: flex;
+  justify-content: space-between;
+}
+#hamburger .chat_container .chat div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#hamburger .chat_container .chat div .image {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+}
+#hamburger .chat_container .chat div .image img {
+  width: 100%;
+  border-radius: 50%;
+}
+#hamburger .chat_container .chat span {
+  display: flex;
+  align-items: center;
+}
+#hamburger .chat_container .chat span button {
+  background-color: blue;
+  padding: 3px 7px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: white;
+}
+#hamburger .chat_container .chat span div {
+  margin-right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: greenyellow;
+}
+
+.hide {
+  display: none;
+}
