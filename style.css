@@ -4,40 +4,45 @@
   box-sizing: border-box;
 }
 
-#hamburger {
-  background-color: grey;
+.hamburger {
+  background-color: rgba(0, 0, 0, 0.8);
   height: 100vh;
   width: 18vw;
+  transition: 0.7s;
   position: fixed;
 }
-#hamburger > div:first-child {
-  padding: 10px;
+.hamburger > div:first-child {
+  padding: 10px 10px 0;
   display: flex;
   justify-content: space-between;
 }
-#hamburger > div:first-child .css_section {
+.hamburger > div:first-child .css_section {
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 3px;
 }
-#hamburger > div:first-child .css_section #css {
+.hamburger > div:first-child .css_section #css {
   width: 15%;
 }
-#hamburger > div:first-child .css_section span {
+.hamburger > div:first-child .css_section span {
   font-size: 20px;
   color: white;
   font-weight: bold;
 }
-#hamburger > div:first-child #arrow {
-  width: 5%;
-  transform: rotate(180deg);
+.hamburger > div:first-child .arrow {
+  position: fixed;
+  left: 240px;
+  top: 28px;
+  transition: 0.7s;
+  width: 15px;
+  cursor: pointer;
 }
-#hamburger > div:nth-child(2) {
+.hamburger > div:nth-child(2) {
   padding: 10px;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
-#hamburger > div:nth-child(2) button {
+.hamburger > div:nth-child(2) button {
   width: 100%;
   padding: 10px 5px;
   border: 1px solid transparent;
@@ -46,69 +51,76 @@
   justify-content: center;
   gap: 4px;
   align-items: center;
+  background-color: darkgray;
+  cursor: pointer;
 }
-#hamburger > div:nth-child(2) button img {
+.hamburger > div:nth-child(2) button img {
   transform: translateY(-1px);
   width: 25px;
 }
-#hamburger > div:nth-child(2) button span {
+.hamburger > div:nth-child(2) button span {
   font-size: 16px;
 }
-#hamburger > div:nth-child(3) {
+.hamburger > div:nth-child(3) {
   display: flex;
   flex-direction: column;
   box-sizing: content-box;
   gap: 15px;
   margin-bottom: 15px;
+  color: white;
 }
-#hamburger > div:nth-child(3) .mail {
+.hamburger > div:nth-child(3) .mail {
   display: flex;
   align-items: center;
   gap: 15px;
   padding-left: 25px;
   opacity: 0.8;
+  cursor: pointer;
 }
-#hamburger > div:nth-child(3) .mail img {
+.hamburger > div:nth-child(3) .mail img {
   width: 20px;
 }
-#hamburger > div:nth-child(3) .mail spam {
+.hamburger > div:nth-child(3) .mail spam {
   font-weight: bold;
 }
-#hamburger > div:nth-child(3) .mail:hover {
+.hamburger > div:nth-child(3) .mail:hover {
   border-left: 3px solid white;
   padding-left: 22.5px;
   opacity: 1;
 }
-#hamburger > div:nth-child(4) {
+.hamburger > div:nth-child(4) {
   padding: 15px 15px 10px;
 }
-#hamburger .message_container {
+.hamburger .message_container {
   padding: 10px 15px;
   display: flex;
   flex-direction: column;
   box-sizing: content-box;
   gap: 15px;
   margin-bottom: 15px;
+  color: white;
 }
-#hamburger .message_container .message {
+.hamburger .message_container .message {
   padding-left: 10px;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
-#hamburger .message_container .message div {
+.hamburger .message_container .message div {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-#hamburger .message_container .message div .color {
+.hamburger .message_container .message div .color {
   width: 8px;
   height: 8px;
   border-radius: 50%;
 }
-#hamburger .message_container .message span {
+.hamburger .message_container .message span {
   font-weight: bold;
 }
-#hamburger .chat_container {
+.hamburger .chat_container {
+  color: white;
   padding: 0 15px;
   margin-top: 5px;
   display: flex;
@@ -116,16 +128,20 @@
   box-sizing: content-box;
   gap: 15px;
 }
-#hamburger .chat_container .chat {
+.hamburger .chat_container .chat {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
-#hamburger .chat_container .chat div {
+.hamburger .chat_container .chat:nth-child(2) span {
+  color: blue;
+}
+.hamburger .chat_container .chat div {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-#hamburger .chat_container .chat div .image {
+.hamburger .chat_container .chat div .image {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -134,22 +150,21 @@
   align-items: center;
   border: 3px solid white;
 }
-#hamburger .chat_container .chat div .image img {
+.hamburger .chat_container .chat div .image img {
   width: 100%;
   border-radius: 50%;
 }
-#hamburger .chat_container .chat span {
-  display: flex;
-  align-items: center;
+.hamburger .chat_container .chat span {
+  color: white;
 }
-#hamburger .chat_container .chat span button {
+.hamburger .chat_container .chat span button {
   background-color: blue;
   padding: 3px 7px;
   border: 1px solid transparent;
   border-radius: 5px;
   color: white;
 }
-#hamburger .chat_container .chat span div {
+.hamburger .chat_container .chat span div {
   margin-right: 8px;
   width: 8px;
   height: 8px;
@@ -157,6 +172,56 @@
   background-color: greenyellow;
 }
 
+.changeBtn {
+  left: 22px;
+  top: 11px;
+  transition: 0.5s;
+  width: 15px;
+  position: fixed;
+  cursor: pointer;
+}
+
+span {
+  transition: 0.7s;
+  color: white;
+}
+
 .hide {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.transform {
+  transform: rotate(180deg);
+}
+
+.changeWidth {
+  width: 4vw;
+}
+
+.center {
+  justify-content: center;
+}
+
+.paddingChange {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 20px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.paddingChange img {
+  width: 20px;
+}
+.paddingChange spam {
+  font-weight: bold;
+}
+.paddingChange:hover {
+  border-left: 3px solid white;
+  padding-left: 17.5px;
+  opacity: 1;
 }
